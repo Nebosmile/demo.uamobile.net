@@ -23,16 +23,13 @@ function placeBanner(obj) {
     var banner = document.createElement('div');
     var id = obj.id;
     banner.id = id;
-    place.appendChild(linker);
-    linker.appendChild(banner);
+    place.appendChild(banner);
+    banner.appendChild(linker);
 
     linker.href = "http://vk.com/mhkon";// Must change according to data
     linker.target = "_blank";
-    linker.setAttribute("style", "display:block; height:100%; width:100%; cursor:pointer");
-    linker.onclick = function {return true};
-    if (linker.onclick) {
-        linker.remove();
-    } 
+    linker.setAttribute("style", "position:absolute; display:block; height:100%; width:100%; cursor:pointer; z-index:40000;");
+    linker.onclick = linkRemove;
 
     wrapper = document.createElement("div");
     banner.appendChild(wrapper);
@@ -57,6 +54,10 @@ function placeBanner(obj) {
     function closeEvent() {
         banner.remove();
         running = -1;
+    }
+
+    function linkRemove() {
+        linker.remove();
     }
 
     function timeRunner(){
