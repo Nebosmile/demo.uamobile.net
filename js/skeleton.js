@@ -115,10 +115,9 @@ function init() {
     var obj = dataJ;
     placeBanner(obj);
     var id = JSON.parse(dataJ.id);
-    //function dddd() {return createDiv(id,"div1");}
-        createDiv(id,"div1", function (){
-            createDiv(id,"div2");
-        });
+
+
+    createDiv(id,obj);
 }
 
 

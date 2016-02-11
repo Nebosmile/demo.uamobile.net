@@ -1,16 +1,20 @@
 /**
- * Created by Ruslan Popenko on 10.02.2016.
+ * .
  */
 
-function createDiv(whereDivID,idCreated,callback){
+function createDiv(whereDivID,idCreated){
 
     var motherDiv = document.getElementById(whereDivID);
     var width = motherDiv.offsetWidth;
     var height =motherDiv.offsetHeight;
+    // var height = document.body.clientHeight;
+    // var width = document.body.clientWidth;
+
+
 
     console.log(height, width);
     var d = document.createElement('div');
-    d.id = idCreated;
+    d.id = "hello";
     d.style.width=(width / 5) + "px";
     d.style.height= height + "px";
     d.style.background='gray';
@@ -22,10 +26,10 @@ function createDiv(whereDivID,idCreated,callback){
 
     motherDiv.appendChild(d.cloneNode(true));
 
-    move(idCreated);
+    move();
 
-    function move (idName) {
-        var elem = document.getElementById(idName);
+    function move () {
+        var elem = document.getElementById("hello");
 
         var start = 0;
         var step =width/100;
@@ -38,20 +42,21 @@ function createDiv(whereDivID,idCreated,callback){
             start +=step;
             if (start > width/2-procent50 && start < width/2-procent50+step )
 
-            setTimeout(timer, 5000);
+                setTimeout(timer, 5000);
             else if(start >= width+100){
                 return ;
             }
             else
-            setTimeout(timer, 25);
+                setTimeout(timer, 25);
+
+
+
         };
         timer();
+
     }
+
+
+
 }
-
-
-
-
-
-
 
