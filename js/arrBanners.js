@@ -1,10 +1,10 @@
 
 var dataJ = {
-    "id": "3",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
+    "id": "2",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
     "type": "1",
     "name": "Place for banner",
     "description": "description",
-    "timer": "15",
+    "timer": "45",
     "data": [
         bannerobject={
             "id":"1",
@@ -12,7 +12,7 @@ var dataJ = {
             "description":"������� �� ������ � ������ �������",
             "imglink":"https://pp.vk.me/c403918/v403918068/20f6/KAhOZA1b_pI.jpg",
             "type":"run",
-            "fixesTime":"5",
+            "fixesTime":"4",
             "idarea":"1",
             "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
         },
@@ -22,7 +22,7 @@ var dataJ = {
             "description":"������ �������, �������������� �����",
             "imglink":"https://pp.vk.me/c5779/v5779068/1dd2/OkaaR7m2794.jpg",
             "type":"run",
-            "fixesTime":"5",
+            "fixesTime":"2",
             "idarea":"1",
             "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
         },
@@ -32,7 +32,7 @@ var dataJ = {
             "description":"���������� �����, �������������� �������",
             "imglink":"https://pp.vk.me/c5779/v5779068/1c5b/XSrHORh_teU.jpg",
             "type":"run",
-            "fixesTime":"6",
+            "fixesTime":"4",
             "idarea":"1",
             "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
         },
@@ -42,7 +42,7 @@ var dataJ = {
             "description":"�������, �������� 2 ��� �� ����� ������",
             "imglink":"https://pp.vk.me/c623320/v623320068/9f6/FgHp9ueaDLY.jpg",
             "type":"run",
-            "fixesTime":"4",
+            "fixesTime":"2",
             "idarea":"1",
             "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
         },
@@ -52,7 +52,7 @@ var dataJ = {
             "description":"�� ������ ��� ������ �������� �����, ����� ������ � ���",
             "imglink":"https://pp.vk.me/c621218/v621218470/1c2fb/xusx9mw_-pc.jpg",
             "type":"run",
-            "fixesTime":"8",
+            "fixesTime":"5",
             "idarea":"1",
             "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
         },
