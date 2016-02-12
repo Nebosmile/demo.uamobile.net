@@ -31,9 +31,16 @@ function createDiv(whereDivID,idCreated){
         imgInA.style.height="100%";
         contlolParametr = width;
     } else if  (whereDivID==3 || whereDivID==4){
-            d.style.width="100%";
-            imgInA.style.width="100%";
-            contlolParametr = height;
+        d.style.width="100%";
+        imgInA.style.width="100%";
+        contlolParametr = height;
+    } else if (whereDivID==6 || whereDivID==7) {
+        d.style.marginTop="100px";
+        d.style.width="50%";
+        imgInA.style.width="100%";
+        d.style.height="50%";
+        imgInA.style.height="100%";
+        contlolParametr = width;
     }
 
     var dBanner = document.getElementById("hello");
