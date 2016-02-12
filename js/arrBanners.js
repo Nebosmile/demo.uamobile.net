@@ -24,47 +24,47 @@ var dataJ = {
             "fixesTime":"2",
             "idarea":"1",
             "mainlink":"https://vk.com/best_video_hd"
+        },
+        bannerobject={
+            "id":"3",
+            "name":"3 news",
+            "description":"���������� �����, �������������� �������",
+            "imglink":"https://pp.vk.me/c5779/v5779068/1c5b/XSrHORh_teU.jpg",
+            "type":"run",
+            "fixesTime":"4",
+            "idarea":"1",
+            "mainlink":"https://vk.com/factura"
+        },
+        bannerobject={
+            "id":"4",
+            "name":"4 news",
+            "description":"�������, �������� 2 ��� �� ����� ������",
+            "imglink":"https://pp.vk.me/c623320/v623320068/9f6/FgHp9ueaDLY.jpg",
+            "type":"run",
+            "fixesTime":"2",
+            "idarea":"1",
+            "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
+        },
+        bannerobject={
+            "id":"5",
+            "name":"5 news",
+            "description":"�� ������ ��� ������ �������� �����, ����� ������ � ���",
+            "imglink":"https://pp.vk.me/c621218/v621218470/1c2fb/xusx9mw_-pc.jpg",
+            "type":"run",
+            "fixesTime":"5",
+            "idarea":"1",
+            "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
+        },
+        bannerobject={
+            "id":"6",
+            "name":"6 news",
+            "description":"������� �� ��� �� ������",
+            "imglink":"https://pp.vk.me/c408116/v408116068/cef/sIk4RurjUm8.jpg",
+            "type":"run",
+            "fixesTime":"5",
+            "idarea":"1",
+            "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
         }
-        // bannerobject={
-        //     "id":"3",
-        //     "name":"3 news",
-        //     "description":"���������� �����, �������������� �������",
-        //     "imglink":"https://pp.vk.me/c5779/v5779068/1c5b/XSrHORh_teU.jpg",
-        //     "type":"run",
-        //     "fixesTime":"4",
-        //     "idarea":"1",
-        //     "mainlink":"https://vk.com/factura"
-        // },
-        // bannerobject={
-        //     "id":"4",
-        //     "name":"4 news",
-        //     "description":"�������, �������� 2 ��� �� ����� ������",
-        //     "imglink":"https://pp.vk.me/c623320/v623320068/9f6/FgHp9ueaDLY.jpg",
-        //     "type":"run",
-        //     "fixesTime":"2",
-        //     "idarea":"1",
-        //     "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
-        // },
-        // bannerobject={
-        //     "id":"5",
-        //     "name":"5 news",
-        //     "description":"�� ������ ��� ������ �������� �����, ����� ������ � ���",
-        //     "imglink":"https://pp.vk.me/c621218/v621218470/1c2fb/xusx9mw_-pc.jpg",
-        //     "type":"run",
-        //     "fixesTime":"5",
-        //     "idarea":"1",
-        //     "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
-        // },
-        // bannerobject={
-        //     "id":"6",
-        //     "name":"6 news",
-        //     "description":"������� �� ��� �� ������",
-        //     "imglink":"https://pp.vk.me/c408116/v408116068/cef/sIk4RurjUm8.jpg",
-        //     "type":"run",
-        //     "fixesTime":"5",
-        //     "idarea":"1",
-        //     "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
-        // },
         //  bannerobject={
         //  "id":"7",
         //  "name":"7 news",

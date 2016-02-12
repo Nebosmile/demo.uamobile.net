@@ -8,7 +8,7 @@ function createDiv(whereDivID,obj){
         var countOfObj=0;
         var banerObj = obj.data[countObj];
         var linkerId = document.getElementById(obj.type);
-        if (banerObj == undefined) {
+        if (!banerObj) {
             motherDiv.remove();
             return;
         }
