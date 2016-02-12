@@ -1,7 +1,6 @@
-
 var dataJ = {
-    "id": "2",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
-    "type": "1",
+    "id": "6",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
+    "type": "2",
     "name": "Place for banner",
     "description": "description",
     "timer": "45",
@@ -65,17 +64,17 @@ var dataJ = {
             "fixesTime":"5",
             "idarea":"1",
             "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
-        }/*,
-         bannerobject={
-         "id":"7",
-         "name":"7 news",
-         "description":"������� � ��� ��������� ��� ������� ������. ",
-         "imglink":"https://pp.vk.me/c309130/v309130068/4d6d/gkFW5Ze0p_8.jpg",
-         "type":"6",
-         "fixesTime":"25",
-         "idarea":"288",
-         "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
-         } */
+        }
+        //  bannerobject={
+        //  "id":"7",
+        //  "name":"7 news",
+        //  "description":"������� � ��� ��������� ��� ������� ������. ",
+        //  "imglink":"https://pp.vk.me/c309130/v309130068/4d6d/gkFW5Ze0p_8.jpg",
+        //  "type":"6",
+        //  "fixesTime":"25",
+        //  "idarea":"288",
+        //  "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
+        //  } 
     ],
     "counter": "500000",
     "id_company": "2",

@@ -7,7 +7,11 @@ function createDiv(whereDivID,obj){
 /////////////////////////////////////////////////
         var countOfObj=0;
         var banerObj = obj.data[countObj];
-        var linkerId = document.getElementById('ualink');
+        var linkerId = document.getElementById(obj.type);
+        if (!banerObj) {
+            motherDiv.remove();
+            return;
+        }
         linkerId.href = banerObj.mainlink;
         console.log(height, width);
         var fixesTime =(banerObj.fixesTime)*1000;
@@ -73,7 +77,7 @@ function createDiv(whereDivID,obj){
                     countOfObj = 1;
                     motherDiv.removeChild(d);
                     countObj+=1;
-                    createDiv(dataJ.id,dataJ);
+                    createDiv(dataJ.type,dataJ);
                     return ;
                 }
                 else
@@ -82,4 +86,3 @@ function createDiv(whereDivID,obj){
             timer();
         }
 }
-

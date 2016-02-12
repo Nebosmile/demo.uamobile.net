@@ -23,15 +23,16 @@ function placeBanner(obj) {
     var linker = document.createElement('a');
     linker.id ="ualink";
     var banner = document.createElement('div');
-    var id = obj.id;
+    var id = obj.type;
     banner.id = id;
     place.appendChild(banner);
-    banner.appendChild(linker);
+    //banner.appendChild(linker);
 
     linker.href = banerObj.mainlink;// Must change according to data
     linker.target = "_blank";
     linker.setAttribute("style", "position:absolute; display:block; height:100%; width:100%; cursor:pointer; z-index:40000;");
-    linker.onclick = linkRemove;
+    // linker.onclick = linkRemove;
+    linker.onclick = closeEvent;
 
     wrapper = document.createElement("div");
     banner.appendChild(wrapper);
@@ -51,7 +52,6 @@ function placeBanner(obj) {
     timeSpan.innerHTML = running;
     timeDiv.appendChild(timeSpan);
     timeDiv.appendChild(document.createTextNode(" сек"));
-    banner.appendChild(timeDiv);
 
     function closeEvent() {
         banner.remove();
@@ -75,35 +75,36 @@ function placeBanner(obj) {
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top:0; color:red; font-size:17px; float:left");
-        setTimeout(timeRunner, 1000);
+        
     } else if (id == 2) { // Bottom
         banner.setAttribute("style", "position:fixed; bottom:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top:0px; right:0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top:0px; color:red; font-size:17px; float:left");
-        setTimeout(timeRunner, 1000);
+       
     } else if (id == 3) { // Left
         banner.setAttribute("style", "position:fixed; top:0px; left:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top: 0px; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top: 0px; left: 0px; color:red; font-size:17px; float:left");
-        setTimeout(timeRunner, 1000);
+        
     } else if (id == 4) {// Right
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top:0px; left:0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top:0px; right:0px; color:red; font-size:17px; float:left");
-        setTimeout(timeRunner, 1000);
+        
     } else if (id == 6) {// fullscreen-dont close
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
         close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; bottom:0px; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
+        banner.appendChild(timeDiv);
         banner.removeChild(close);
-        linker.onclick = closeEvent;
     } else if (id == 7) {// fullscreen-close-timer
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
         close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; bottom:0px; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
-        linker.onclick = closeEvent;
+        banner.appendChild(timeDiv);
+        
     } else {console.log("Set right parametr");}
 
     banner.style.borderRadius ="5px";
@@ -117,7 +118,7 @@ function placeBanner(obj) {
 function init() {
     var obj = dataJ;
     placeBanner(obj);
-    var id = JSON.parse(dataJ.id);
+    var id = JSON.parse(dataJ.type);
     createDiv(id,obj);
 }
 
