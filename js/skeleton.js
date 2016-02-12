@@ -18,6 +18,7 @@ if (typeof uamobile == 'undefined') {
 /////////////////////////////
 function placeBanner(obj) {
     var running = obj.timer;
+    var banerObj = obj.data[countObj];
     var place = document.getElementsByTagName('body')[0];
     var linker = document.createElement('a');
     var banner = document.createElement('div');
@@ -26,7 +27,7 @@ function placeBanner(obj) {
     place.appendChild(banner);
     banner.appendChild(linker);
 
-    linker.href = "http://vk.com/mhkon";// Must change according to data
+    linker.href = banerObj.mainlink;// Must change according to data
     linker.target = "_blank";
     linker.setAttribute("style", "position:absolute; display:block; height:100%; width:100%; cursor:pointer; z-index:40000;");
     linker.onclick = linkRemove;
