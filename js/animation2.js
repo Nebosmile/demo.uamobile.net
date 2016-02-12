@@ -46,13 +46,14 @@ function createDiv(whereDivID,obj){
     }
 
     var dBanner = document.getElementById("hello");
+    var dBannerheight=dBanner.offsetHeight;
     move(contlolParametr);
 
         function move (contlolParametr) {
             var elem = document.getElementById("hello");
             var step = contlolParametr/100;
             var procent50;
-            var start = -Math.round(contlolParametr/5);
+            var start = -Math.round(contlolParametr/3.5);
 
             var timer = function(){
                 if(contlolParametr == width){

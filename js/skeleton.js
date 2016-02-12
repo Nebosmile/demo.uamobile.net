@@ -77,12 +77,12 @@ function placeBanner(obj) {
         timeDiv.setAttribute("style", "position:absolute; top:0; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
     } else if (id == 2) { // Bottom
-        banner.setAttribute("style", "position:fixed; bottom:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4)");
+        banner.setAttribute("style", "position:fixed; bottom:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top:0px; right:0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top:0px; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
     } else if (id == 3) { // Left
-        banner.setAttribute("style", "position:fixed; top:0px; left:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4)");
+        banner.setAttribute("style", "position:fixed; top:0px; left:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top: 0px; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top: 0px; left: 0px; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
@@ -105,12 +105,13 @@ function placeBanner(obj) {
         setTimeout(timeRunner, 1000);
         linker.onclick = closeEvent;
     } else {console.log("Set right parametr");}
-
-
+    
+    banner.style.borderRadius ="5px";
     banner.style.fontSize = "27px";
     banner.style.whiteSpace = "word-warp";
     banner.style.zIndex = "10000";
     banner.style.color = "white";
+    banner.style.overflow ="hidden";
 }
 
 function init() {
