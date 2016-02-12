@@ -15,7 +15,7 @@ if (typeof uamobile == 'undefined') {
         uamobile.head.appendChild(uamobile.script);
     };
 }
-
+/////////////////////////////
 function placeBanner(obj) {
     var running = obj.timer;
     var place = document.getElementsByTagName('body')[0];
