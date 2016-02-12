@@ -12,7 +12,7 @@ function createDiv(whereDivID,idCreated){
         var d = document.createElement('a');
         var imgInA=document.createElement('img');
         d.target = "_blank";
-        d.setAttribute("href", "http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4");
+        d.href = banerObj.mainlink;
         d.id = "hello";
         d.style.display="inline-block";
         d.style.background='gray';
