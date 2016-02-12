@@ -105,7 +105,7 @@ function placeBanner(obj) {
         setTimeout(timeRunner, 1000);
         linker.onclick = closeEvent;
     } else {console.log("Set right parametr");}
-    
+
     banner.style.borderRadius ="5px";
     banner.style.fontSize = "27px";
     banner.style.whiteSpace = "word-warp";
