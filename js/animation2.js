@@ -1,12 +1,14 @@
 var countObj = 0;
-function createDiv(whereDivID,idCreated){
+function createDiv(whereDivID,obj){
 
     var motherDiv = document.getElementById(whereDivID);
     var width = motherDiv.offsetWidth;
     var height =motherDiv.offsetHeight;
 /////////////////////////////////////////////////
         var countOfObj=0;
-        var banerObj = idCreated.data[countObj];
+        var banerObj = obj.data[countObj];
+        var linkerId = document.getElementById('ualink');
+        linkerId.href = banerObj.mainlink;
         console.log(height, width);
         var fixesTime =(banerObj.fixesTime)*1000;
         var d = document.createElement('a');

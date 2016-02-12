@@ -21,6 +21,7 @@ function placeBanner(obj) {
     var banerObj = obj.data[countObj];
     var place = document.getElementsByTagName('body')[0];
     var linker = document.createElement('a');
+    linker.id ="ualink";
     var banner = document.createElement('div');
     var id = obj.id;
     banner.id = id;

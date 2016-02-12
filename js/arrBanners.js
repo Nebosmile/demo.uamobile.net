@@ -24,7 +24,7 @@ var dataJ = {
             "type":"run",
             "fixesTime":"2",
             "idarea":"1",
-            "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
+            "mainlink":"https://vk.com/best_video_hd"
         },
         bannerobject={
             "id":"3",
@@ -34,7 +34,7 @@ var dataJ = {
             "type":"run",
             "fixesTime":"4",
             "idarea":"1",
-            "mainlink":"http://uamobile.net/actionloadnews/id/379/time/1452893730929/id/2/session/avj8odpp39lf3bd8gtv1t4pqt4"
+            "mainlink":"https://vk.com/factura"
         },
         bannerobject={
             "id":"4",
