@@ -72,34 +72,34 @@ function placeBanner(obj) {
 
 
     if (id == 1) { // Top
-        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:30%; background-color:#000;");
-        close.setAttribute("style", "position:relative; bottom:-80%; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:relative; bottom:-80%; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4);");
+        close.setAttribute("style", "position:absolute; top:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
+        timeDiv.setAttribute("style", "position:absolute; top:0; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
     } else if (id == 2) { // Bottom
-        banner.setAttribute("style", "position:fixed; bottom:0px; right:0px; width:100%; height:30%; background-color:#000;");
-        close.setAttribute("style", "position:relative; top:0; float: right; rigth: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:relative; top:0; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; bottom:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4)");
+        close.setAttribute("style", "position:absolute; top:0; float: right; rigth: 0px; color:red; font-size:17px; cursor:pointer;");
+        timeDiv.setAttribute("style", "position:absolute; top:0; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
     } else if (id == 3) { // Left
-        banner.setAttribute("style", "position:fixed; top:0px; left:0px; width:30%; height:100%; background-color:#000;");
+        banner.setAttribute("style", "position:fixed; top:0px; left:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4)");
         close.setAttribute("style", "position:absolute; top: 0px; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top: 0px; left: 0px; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
     } else if (id == 4) {// Right
-        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:30%; height:100%; background-color:#000;");
+        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4);");
         close.setAttribute("style", "position:absolute; top:0px; left:0; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; top:0px; right:0px; color:red; font-size:17px; float:left");
         setTimeout(timeRunner, 1000);
     } else if (id == 6) {// fullscreen-dont close
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
-        close.setAttribute("style", "position:relative; bottom:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:relative; bottom:0; color:red; font-size:17px; float:left");
+        close.setAttribute("style", "position:absolute; bottom:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
+        timeDiv.setAttribute("style", "position:absolute; bottom:0; color:red; font-size:17px; float:left");
         banner.removeChild(timeDiv);
     } else if (id == 7) {// fullscreen-close-timer
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
-        close.setAttribute("style", "position:relative; bottom:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:relative; bottom:0; color:red; font-size:17px; float:left");
+        close.setAttribute("style", "position:absolute; bottom:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
+        timeDiv.setAttribute("style", "position:absolute; bottom:0; color:red; font-size:17px; float:left");
         banner.removeChild(close);
         setTimeout(timeRunner, 1000);
     } else {console.log("Set right parametr");}
@@ -115,8 +115,6 @@ function init() {
     var obj = dataJ;
     placeBanner(obj);
     var id = JSON.parse(dataJ.id);
-
-
     createDiv(id,obj);
 }
 
