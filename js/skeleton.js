@@ -94,12 +94,12 @@ function placeBanner(obj) {
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
         close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; bottom:0px; color:red; font-size:17px; float:left");
-        banner.removeChild(timeDiv);
+        setTimeout(timeRunner, 1000);
+        banner.removeChild(close);
     } else if (id == 7) {// fullscreen-close-timer
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
         close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
         timeDiv.setAttribute("style", "position:absolute; bottom:0px; color:red; font-size:17px; float:left");
-        banner.removeChild(close);
         setTimeout(timeRunner, 1000);
     } else {console.log("Set right parametr");}
 
