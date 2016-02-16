@@ -33,8 +33,8 @@ function LoadBanners(url, callback,callback1){
 }
 
 var dataJ = {
-    "id": "1",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
-    "type": "2",
+    "id": "4",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
+    "type": "2", ////1 -->   2<---
     "name": "Place for banner",
     "description": "description",
     "timer": "45",
@@ -63,7 +63,7 @@ function placeBanner(obj) {
     var linker = document.createElement('a');
     linker.id ="ualink";
     var banner = document.createElement('div');
-    var id = obj.type;
+    var id = obj.id;
     banner.id = id;
     place.appendChild(banner);
     //banner.appendChild(linker);
@@ -158,8 +158,9 @@ function placeBanner(obj) {
 function init() {
     var obj = dataJ;
     placeBanner(obj);
-    var id = JSON.parse(dataJ.type);
-    createDiv(id,obj);
+    var id = (dataJ.id);
+    var type1 = (dataJ.type);
+    createDiv(id,obj,"bannerId_",type1);
 }
 function PushObjinArr(){
     var Headic = document.getElementsByTagName('head')[0];

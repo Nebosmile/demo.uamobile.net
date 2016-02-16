@@ -1,16 +1,18 @@
 var countObj = 0;
-function createDiv(whereDivID,obj){
-
+function createDiv(whereDivID,obj,dopId,type1){
+    var bannerId_ = dopId;
     var motherDiv = document.getElementById(whereDivID);
     var width = motherDiv.offsetWidth;
     var height =motherDiv.offsetHeight;
 /////////////////////////////////////////////////
-        var countOfObj=0;
         var banerObj = obj.data[countObj];
-        var linkerId = document.getElementById(obj.type);
+        var linkerId = document.getElementById(obj.id);
         if (!banerObj) {
-            motherDiv.remove();
-            return;
+            setTimeout(function(){
+                motherDiv.remove();
+                return;
+            },500);
+
         }
         linkerId.href = banerObj.mainlink;
         console.log(height, width);
@@ -19,16 +21,17 @@ function createDiv(whereDivID,obj){
         var imgInA=document.createElement('img');
         d.target = "_blank";
         d.href = banerObj.mainlink;
-        d.id = "hello";
+        d.id = "hello"+bannerId_;
         d.style.display="inline-block";
         d.style.background='gray';
         d.style.lineHeight="0";
-        d.style.position = 'relative';
+        d.style.position = 'absolute';
         var ImLink = banerObj.imglink;
         imgInA.setAttribute("src",ImLink);
         imgInA.style.display="inline-block";
         motherDiv.appendChild(d);
         d.appendChild(imgInA);
+
 
         var contlolParametr;
 
@@ -49,40 +52,62 @@ function createDiv(whereDivID,obj){
         contlolParametr = width;
     }
 
-    var dBanner = document.getElementById("hello");
-    var dBannerheight=dBanner.offsetHeight;
-    move(contlolParametr);
 
-        function move (contlolParametr) {
-            var elem = document.getElementById("hello");
-            var step = contlolParametr/100;
+
+    var start;
+
+
+      var move =  function(contlolParametr,bannerId_) {
+            var elem = document.getElementById("hello"+bannerId_);
+            var heig = elem.offsetHeight;
+            var step = 0;
             var procent50;
-            var start = -Math.round(contlolParametr/3.5);
+
+          if(type1==1){
+              start = -contlolParametr/3.5;
+              step = contlolParametr/100;
+          }
+          else if(type1==2){
+              start = contlolParametr;
+              step = -contlolParametr/100;
+          }
+
 
             var timer = function(){
                 if(contlolParametr == width){
                     elem.style.left = start + 'px';
-                    procent50 = (dBanner.offsetWidth)/2;
+                    procent50 = (elem.offsetWidth)/2;
+
                 }
                 else if(contlolParametr == height){
                     elem.style.top = start + 'px';
-                    procent50 = (dBanner.offsetHeight)/2;
+                    procent50 = (elem.offsetHeight)/2;
+                    console.log(procent50);
                 }
 
                 start += step;
-                if (start > contlolParametr/2-procent50 && start <= contlolParametr/2-procent50+step ){
-                    setTimeout(timer, fixesTime);
-                }
-                else if (start >= contlolParametr+100){
-                    countOfObj = 1;
-                    motherDiv.removeChild(d);
+                if (start > contlolParametr/2-procent50 && start <= contlolParametr/2-procent50+Math.sqrt((Math.pow(step, 2)))){
+
                     countObj+=1;
-                    createDiv(dataJ.type,dataJ);
+                    bannerId_+=1;
+                    setTimeout(function(){
+                        timer();
+                        createDiv(dataJ.id,dataJ,bannerId_,type1);
+                    }, fixesTime);
+                }
+                else if (start >= contlolParametr && type1==1){
+                    motherDiv.removeChild(elem);
+
+                    return ;
+                }
+                else if(start <=0-procent50*2  && type1==2){
+                    motherDiv.removeChild(elem);
                     return ;
                 }
                 else
-                    setTimeout(timer, 35);
+                    setTimeout(timer, 10);
             };
             timer();
         }
+    move(contlolParametr,bannerId_);
 }
