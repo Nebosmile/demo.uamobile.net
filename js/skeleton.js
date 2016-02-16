@@ -32,7 +32,7 @@ function LoadBanners(url, callback,callback1){
 }
 
 var dataJ = {
-    "id": "7",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
+    "id": "6",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
     "type": "2", ////1 -->   2<---
     "name": "Place for banner",
     "description": "description",
@@ -128,7 +128,7 @@ function placeBanner(obj) {
     } else if (id == 6) {// fullscreen-dont close
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(80, 80, 80, 0.6); z-index:20000");
         close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:rgb(120, 120, 120); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
-        timeDiv.setAttribute("style", "position:absolute; top:10%; left:42%; color:white; font-size:20px; font-family:sans-serif;");
+        timeDiv.setAttribute("style", "position:absolute; top:50px; left:42%; color:white; font-size:20px; font-family:sans-serif;");
         setTimeout(timeRunner, 1000);
         banner.appendChild(timeDiv);
         banner.removeChild(close);
@@ -136,7 +136,7 @@ function placeBanner(obj) {
     } else if (id == 7) {// fullscreen-close-timer
         banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(80, 80, 80, 0.6); z-index:20000");
         close.setAttribute("style", "position:absolute; top:5px; float: right; right: 10px; color:rgb(80, 80, 80); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
-        timeDiv.setAttribute("style", "position:absolute; top:10%; left:42%; color:white; font-size:20px; font-family:sans-serif;");
+        timeDiv.setAttribute("style", "position:absolute; top:50px; left:42%; color:white; font-size:20px; font-family:sans-serif;");
         setTimeout(timeRunner, 1000);
         banner.appendChild(timeDiv);
 
