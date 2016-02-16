@@ -1,6 +1,5 @@
 /*8if (typeof uamobile == 'undefined') {
     var uamobile = Object();
-
     uamobile.LoadScript = function (url, callback) {
         // Adding the script tag to the head as suggested before
         uamobile.head = document.getElementsByTagName('head')[0];
@@ -33,8 +32,8 @@ function LoadBanners(url, callback,callback1){
 }
 
 var dataJ = {
-    "id": "2",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
-    "type": "1", ////1 -->   2<---
+    "id": "7",/////1-top,2-bottom,3-left,4-right, 5- iframe, 6-fullscrin-dont close,7-fullscrin-close-timer//// ������ �������;���� � ����������� ����� ��� ��������
+    "type": "2", ////1 -->   2<---
     "name": "Place for banner",
     "description": "description",
     "timer": "45",
@@ -49,6 +48,7 @@ var dataJ = {
     "weekday": {"0": "2", "6": "2"},
     "hour": {"1": "2", "2": "2", "3": "2", "4": "2", "5": "2", "6": "2", "7": "2"}
 };
+
 var bannerobject;
 var ObjInArr =dataJ.data;
 var idBannerObj =0;
@@ -60,29 +60,27 @@ function placeBanner(obj) {
     var running = obj.timer;
     var banerObj = obj.data[countObj];
     var place = document.getElementsByTagName('body')[0];
-    var linker = document.createElement('a');
-    linker.id ="ualink";
+    // var linker = document.createElement('a');
+    // linker.id ="ualink";
     var banner = document.createElement('div');
     var id = obj.id;
     banner.id = id;
     place.appendChild(banner);
-    //banner.appendChild(linker);
+    //banner.appendChild(linker); // Link of mother object 
 
-    linker.href = banerObj.mainlink;// Must change according to data
-    linker.target = "_blank";
-    linker.setAttribute("style", "position:absolute; display:block; height:100%; width:100%; cursor:pointer; z-index:40000;");
+    // linker.href = banerObj.mainlink;// Must change according to data
+    // linker.target = "_blank";
+    // linker.setAttribute("style", "position:absolute; display:block; height:100%; width:100%; cursor:pointer; z-index:40000;");
     // linker.onclick = linkRemove;
-    linker.onclick = closeEvent;
+    // linker.onclick = closeEvent;
 
-    wrapper = document.createElement("div");
-    banner.appendChild(wrapper);
-    //appendData(data);
-
-    var close = document.createElement("span");
+    var close = document.createElement("div");
     close.id = "uamobile_close_379";
-    close.innerHTML = 'Закрыть Х';
+    close.innerHTML = 'Х';
     close.onclick = closeEvent;
     banner.appendChild(close);
+        close.onmouseover = function() {close.style.boxShadow = "0 0 5px 3px rgb(60, 60, 60)";};
+        close.onmouseleave = function() {close.style.boxShadow = "none";};
 
     var timeDiv = document.createElement("div");
     timeDiv.id = "uamobile_timer_379";
@@ -112,36 +110,33 @@ function placeBanner(obj) {
     }
 
     if (id == 1) { // Top
-        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4);");
-        close.setAttribute("style", "position:absolute; top:0; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:absolute; top:0; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; border:1px solid transparent; padding:5px; top:5px; right:1%; left:1%;  width:98%; margin: 0 auto; height:30%; background-color:rgba(80, 80, 80, 0.4);");
+        close.setAttribute("style", "position:absolute; top:5px; float: right; right: 5px; color:rgb(120, 120, 120); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
 
     } else if (id == 2) { // Bottom
-        banner.setAttribute("style", "position:fixed; bottom:0px; right:0px; width:100%; height:30%; background-color:rgba(142, 105, 84, 0.4);");
-        close.setAttribute("style", "position:absolute; top:0px; right:0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:absolute; top:0px; color:red; font-size:17px; float:left");
-
+        banner.setAttribute("style", "position:fixed; border:1px solid transparent; padding:5px; bottom:5px; right:1%; left:1%; width:98%; margin: 0 auto; height:30%; background-color:rgba(80, 80, 80, 0.4);");
+        close.setAttribute("style", "position:absolute; top:5px; right:15px; color:rgb(120, 120, 120); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
+        
     } else if (id == 3) { // Left
-        banner.setAttribute("style", "position:fixed; top:0px; left:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4);");
-        close.setAttribute("style", "position:absolute; top: 0px; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:absolute; top: 0px; left: 0px; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; padding:5px; top:1%; bottom:1%; left:1%; width:30%; height:98%; background-color:rgba(80, 80, 80, 0.4);");
+        close.setAttribute("style", "position:absolute; top:5px; right:5px; color:rgb(120, 120, 120); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
 
     } else if (id == 4) {// Right
-        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:30%; height:100%; background-color:rgba(142, 105, 84, 0.4);");
-        close.setAttribute("style", "position:absolute; top:0px; left:0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:absolute; top:0px; right:0px; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; padding:5px; top:1%; bottom:1%; right:1%; width:30%; height:98%; background-color:rgba(80, 80, 80, 0.4);");
+        close.setAttribute("style", "position:absolute; top:5px; left:5px; color:rgb(120, 120, 120); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
 
     } else if (id == 6) {// fullscreen-dont close
-        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
-        close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:absolute; bottom:0px; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(80, 80, 80, 0.6); z-index:20000");
+        close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:rgb(120, 120, 120); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
+        timeDiv.setAttribute("style", "position:absolute; top:10%; left:42%; color:white; font-size:20px; font-family:sans-serif;");
         setTimeout(timeRunner, 1000);
         banner.appendChild(timeDiv);
         banner.removeChild(close);
+
     } else if (id == 7) {// fullscreen-close-timer
-        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(137, 96, 55, 0.5); z-index:20000");
-        close.setAttribute("style", "position:absolute; bottom:0px; float: right; right: 0px; color:red; font-size:17px; cursor:pointer;");
-        timeDiv.setAttribute("style", "position:absolute; bottom:0px; color:red; font-size:17px; float:left");
+        banner.setAttribute("style", "position:fixed; top:0px; right:0px; width:100%; height:100%; background:rgba(80, 80, 80, 0.6); z-index:20000");
+        close.setAttribute("style", "position:absolute; top:5px; float: right; right: 10px; color:rgb(80, 80, 80); font-size:18px; cursor:pointer; background:white; width:20px; height:20px; border-radius:5px; text-align:center; vertical-align: center; font-family:sans-serif; font-weight: bold;");
+        timeDiv.setAttribute("style", "position:absolute; top:10%; left:42%; color:white; font-size:20px; font-family:sans-serif;");
         setTimeout(timeRunner, 1000);
         banner.appendChild(timeDiv);
 
@@ -162,6 +157,7 @@ function init() {
     var type1 = (dataJ.type);
     createDiv(id,obj,"bannerId_",type1);
 }
+
 function PushObjinArr(){
     var Headic = document.getElementsByTagName('head')[0];
     var Scriptic = document.getElementById(20);
@@ -175,8 +171,7 @@ function PushObjinArr(){
     LoadBanners(ObjUrl,PushObjinArr,init);
 }
 
-
-var adressObj1 = '../js/arrBanners.js';
-
 LoadBanners(ObjUrl,PushObjinArr,init);
+
+// var adressObj1 = '../js/arrBanners.js';
 //uamobile.LoadScript(adressObj1,init);
