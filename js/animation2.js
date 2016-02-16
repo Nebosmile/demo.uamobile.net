@@ -128,11 +128,11 @@ function createDiv(whereDivID,obj,dopId,type1){
 
           if(type1==1){
               start = -contlolParametr/3.5;
-              step = contlolParametr/100;
+              step = Math.floor(contlolParametr/100);
           }
           else if(type1==2){
               start = contlolParametr;
-              step = -contlolParametr/100;
+              step = Math.floor(-contlolParametr/100);
           }
 
             var timer = function(){
