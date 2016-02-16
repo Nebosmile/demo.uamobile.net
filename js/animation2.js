@@ -86,8 +86,16 @@ function createDiv(whereDivID,obj,dopId,type1){
                 }
 
                 start += step;
-                if (start > contlolParametr/2-procent50 && start <= contlolParametr/2-procent50+Math.sqrt((Math.pow(step, 2)))){
+                if (start <= contlolParametr/2-procent50 && start > contlolParametr/2-procent50+step &&type1==2 ){
+                    countObj+=1;
+                    bannerId_+=1;
+                    setTimeout(function(){
+                        timer();
+                        createDiv(dataJ.id,dataJ,bannerId_,type1);
+                    }, fixesTime);
 
+                }
+                else if (start >= contlolParametr/2-procent50 && start < contlolParametr/2-procent50+step &&type1==1){
                     countObj+=1;
                     bannerId_+=1;
                     setTimeout(function(){
